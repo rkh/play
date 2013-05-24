@@ -1,4 +1,4 @@
 foo:
   secure: "Xgr8tHVJA999oQFKYiZNTlj0gh/3AObnjOxhhNO4Hxfj1YHj037wvlh+lWr+\nhLWGmL6s7HJzKsg6WMtPFo4he9lkmjJTvY738F4cjoUPiW1oKV35M7aoMJLb\nry+GTJ/5h59Y4WAdfFEhMQsPFJOK/0v5aG6T1i1eOUFK/XAxyvQ="
 script:
-  - ruby -ryaml -e "puts YAML.load_file('.travis.yml')['foo']['secure']"
+  - ruby -ryaml -e "puts YAML.load_file('.travis.yml')['foo']['secure']" | decrypt
